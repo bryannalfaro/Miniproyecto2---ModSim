@@ -17,11 +17,11 @@ def f4(x,y):
 functionChoice = [f1,f2,f3,f4]
 # Choose elements with different probabilities
 
-fig = plt.figure()
+fig = plt.figure(figsize=(10,10))
 ax = fig.add_subplot(111)
 
 x,y = random.random(), random.random()
-for i in range(1, 80000):
+for i in range(1, 3000):
     ax.plot(x, y, 'go')
     x,y = np.random.choice(functionChoice, 1, p=[0.85,0.07,0.07,0.01])[0](x,y)
 
